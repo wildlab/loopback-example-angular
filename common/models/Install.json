@@ -1,0 +1,46 @@
+{
+  "name": "Install",
+  "description" : "Install, check or delete an AppId",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": false
+  },
+  "properties": {
+   "id": {
+      "type": "string",
+      "required": true,
+	  "description": "InstallId@siteId defined to Eloqua"
+    },
+	"installId": {
+      "type": "string",
+      "required": true,
+	  "description": "Installation identify defined to Eloqua"
+    },
+	"appId": {
+      "type": "string",
+      "required": true,
+	  "description": "Application identify that Eloqua ascks you to install,delete or check"
+    },
+    "siteId": {
+      "type": "Number",
+	  "required": true,
+	  "description": "Site identify that request you to install,delete or check an AppId"
+    },
+	"siteName": {
+      "type": "string",
+	  "required": true,	  
+	  "description": "Site Name that request you to install,delete or check an AppId"
+    },
+	"status": { 
+	  "type": "string",
+	  "required": true,	  
+	  "description": "Status of App istallation enebled/deleted"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {},
+  "http": {"path": "/EloquaApp/Install"}
+}

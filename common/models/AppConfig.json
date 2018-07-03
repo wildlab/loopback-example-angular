@@ -1,0 +1,42 @@
+{
+  "name": "AppConfig",
+  "description" : "Configurate Intallation",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": false
+  },
+  "properties": {
+	"installId": {
+      "type": "String",
+      "required": true,
+	  "description": "Istallation identify defined to Eloqua"
+    },
+	"appId": {
+      "type": "String",
+      "required": true,
+	  "description": "Application identify that Eloqua ascks you to install,delete or check"
+    },
+    "siteId": {
+      "type": "String",
+	  "required": true,
+	  "description": "Site identify that request you to install,delete or check an AppId"
+    },
+	"siteName": {
+      "type": "String",
+	  "required": true,	  
+	  "description": "Site Name that request you to configure"
+    },
+	"userId": {
+      "type": "String",
+	  "required": true,	  
+	  "description": "UserId  that request you to configure"
+    }
+	
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {},
+  "http": {"path": "/EloquaConfig/Install"}
+}
